@@ -1,0 +1,16 @@
+[Unit]
+Description=Node.js conntact-api 
+
+[Service]
+WorkingDirectory=/var/www/nodejs/contact_api
+Type=simple
+ExecStart=/usr/bin/node app/app.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-server
+Environment=NODE_ENV=production PORT=3000
+
+[Install]
+WantedBy=multi-user.target
