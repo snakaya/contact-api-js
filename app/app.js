@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000;
 app.get('/',function(req,res){
     res.json({
         company_name:"LOOSEDAYS Co.,Ltd.",
-        email:"info@loosedays.jp"
+        contact:{email:["info@loosedays.jp"]}
     });
 });
 
